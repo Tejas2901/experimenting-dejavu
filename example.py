@@ -14,7 +14,7 @@ with open("dejavu.cnf.SAMPLE") as f:
     # Get the argument passed
     argument = sys.argv[1]
     #fingerprint mp3 in our directories
-   # djv.fingerprint_directory("raw", [".mp3", ".wav"])
+    djv.fingerprint_directory("raw", [".mp3", ".wav"])
     results = djv.recognize(FileRecognizer, argument)
     for i in results['results']:
         print(f"song name: {i['song_name']}, input_confindence: {i['input_confidence']}, fingerprinted_confidence: {i['fingerprinted_confidence']}" )
